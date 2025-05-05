@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>VPNBA Launcher</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: #f1f5f9;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    button {
+      background: #38bdf8;
+      color: black;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #0ea5e9;
+    }
+    .output {
+      margin-top: 2rem;
+      font-family: monospace;
+      background: #1e293b;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 VPNBA Launcher</h1>
+  <p>Benvenuto nel launcher del tuo nuovo ecosistema!</p>
+  <button onclick="caricaConfig()">🔍 Carica Config .vpnba</button>
+
+  <div class="output" id="output">
+    Nessun file caricato.
+  </div>
+
+  <script>
+    async function caricaConfig() {
+      const url = 'config.vpnba'; 
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("File non trovato!");
+        const data = await res.json();
+        document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+      } catch (e) {
+        document.getElementById('output').innerText = "❌ Errore: " + e.message;
+      }
+    }
+  </script>
+
+</body>
+</html>

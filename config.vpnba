@@ -1,0 +1,10 @@
+{
+  "type": "vpnba-config",
+  "server": "vpn.mysite.com",
+  "port": 51820,
+  "protocol": "wireguard",
+  "user": "user01",
+  "token": "ABC123456789XYZ",
+  "dns": "1.1.1.1",
+  "autoconnect": true
+}

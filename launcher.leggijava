@@ -1,0 +1,8 @@
+[java]
+main_class = net.launcher.Main
+args = --fullscreen --modded
+memory = 2048
+
+[info]
+name = Custom Java Launcher
+version = 1.0
