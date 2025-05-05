@@ -51,4 +51,4 @@ jar cfe leggijava-launcher.jar LeggiJavaLauncher LeggiJavaLauncher.class
 
 ---
 
-Creato con ❤️ da ChatGPT.
+Creato con ❤️ da Bosco Antico e il suo amico ChatGPT.
